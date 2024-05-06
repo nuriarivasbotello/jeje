@@ -1,0 +1,44 @@
+#mensaje {
+  width: 300px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+#mensaje button {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+#mensaje button:hover {
+  cursor: pointer;
+}
+body {
+  background-color: rgb(211, 174, 235);
+  color: white;
+}
+.corazones-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.corazon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('https://emojicdn.elk.sh/💜');
+  background-size: cover;
+  animation: moveHeart linear infinite;
+}
+
+@keyframes moveHeart {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
